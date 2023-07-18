@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Basics</title>
+    <style>
+        input, label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+        fieldset input, fieldset label {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Basics</h1>
+
+    <form method="post" action="processor.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Dirane" required>
+
+        <label for="favcolor">Favorite Color</label>
+        <input type="color" name="favcolor" id="favcolor">
+        <fieldset>
+            <legend>Do you want spam?</legend>
+            <input type="radio" name="spam" id="spam-yes" value="yes">
+            <label for="spam-yes">Yes, Send me spam</label>
+
+            <input type="radio" name="spam" id="spam-yes" value="no" checked>
+            <label for="spam-yes">No, don't send me spam</label>
+    </fieldset>
+
+        <fieldset>
+            <legend>Favorite Animal</legend>
+            <input type="checkbox" name="cat" id="cat" value="Cat">
+            <label for="cat">Cat</label>
+
+            <input type="checkbox" name="dog" id="dog" value="Dog" checked>
+            <label for="dog">Dog</label>
+
+            <input type="checkbox" name="llma" id="llma" value="Llma">
+            <label for="llna">LLma</label>
+    </fieldset>
+
+    <label for="cheese">Favorite Cheese</label>
+    <select id="cheese" name="favcheese">
+        <option>-----</option>
+        <option value="Swiss">Swiss</option>
+        <option value="Cmr" selected>Cameroon</option>
+        <option value="Frs">France</option>
+        <option value="Brie">Brie</option>
+    </select>
+
+    <label for="comment">Please tell us what you think</label>
+    <textarea name="comment" id="comment" rows="10" cols="50">
+
+    </textarea>
+
+    <input type="submit" name="submit" id="submit" value="Send form">
+    </form>
+</body>
+</html>
